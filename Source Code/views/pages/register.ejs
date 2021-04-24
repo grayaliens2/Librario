@@ -1,0 +1,45 @@
+<%- include('../template/head') %>
+<div class="page-wrap">
+
+<div class="container mt-5">
+  <a href="/" class="btn btn-lg btn-primary">Back</a>
+  <h1>Registration Page</h1>
+  <form method="POST" action="/register" autocomplete="off">
+        <div class="form-group">
+          <label for="exampleInputUsername">Username</label>
+          <input type="username" placeholder="Enter Your Username" name="username" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Username">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" placeholder="Enter Your Password" name="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFirstName">First Name</label>
+          <input type="firstname" placeholder="Enter Your First Name" name="firstname" class="form-control" id="firstname" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputLastName">Last Name</label>
+          <input type="lastname" placeholder="Enter Your Last Name" name="lastname" class="form-control" id="lastname" placeholder="Miller">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail">Email</label>
+          <input type="email" placeholder="Enter Your Email" name="email" class="form-control" id="email" placeholder="johnmiller@gmail.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputDOB">Date of Birth</label>
+          <input type="dob" placeholder="Enter Your Date of Birth (year-month-day)" name="dob" class="form-control" id="dob" placeholder="1996-05-18">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputSQ1">Security: Question 1</label>
+          <input type="sq1" placeholder="Enter A Security Question" name="sq1" class="form-control" id="securityq1" placeholder="What street did you grow up on?">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputSA1">Security: Answer 1</label>
+          <input type="sa1" placeholder="Enter Your Security Question's Answer" name="sa1" class="form-control" id="securitya1" placeholder="Baker Street">
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+</div>
+
+<%- include('../template/footer') %>
+

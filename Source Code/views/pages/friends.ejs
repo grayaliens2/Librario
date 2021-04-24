@@ -1,0 +1,80 @@
+<%- include('../template/head') %>
+
+<%- include('../template/nav') %>
+<div class="page-wrap">
+
+
+<div class="container">
+
+  <div class="card-header" >
+
+    My Friends
+
+  </div>
+  <% if (data){
+    var friends = '';
+    data.forEach(function(item){
+      var x = Math.floor((Math.random() * 6) + 1);
+      x = "../../public/img/icon" + String(x) + "@2x.png";
+      friends += '<div class="col"><div class="card"><img class="img" src= '+x+' height="200" width="200" alt="Card image cap"><div class="card-body"><h3>'+ item.UserName+'</h3></div><form method="POST" action="/viewfriend" autocomplete="off"> \
+        <button name="ffeerr" id = "ffeerr" type="submit" value='+item.UserID+'>View Games</button></form></div></div>'
+    });
+    var hold = '<div class="row">'+ friends +' </div>'
+    %>
+    <%- hold %>
+  <% } %>
+
+</div>
+
+<div class="container">
+
+  <div class="card-header" >
+
+    Add Friends
+
+  </div>
+  <% if (users){
+    var friends = '';
+    users.forEach(function(item){
+      var x = Math.floor((Math.random() * 6) + 1);
+      x = "../../public/img/icon" + String(x) + "@2x.png";
+      friends += '<div class="col"><div class="card"><img class="img" src= '+x+' height="200" width="200" alt="Card image cap"><div class="card-body"><h3>'+ item.UserName+'</h3></div> \
+        <button name="ger" id = "ger" type="submit" value='+item.UserID+'>Add Friend</button></div></div>'
+    });
+    var hold = '<div class="row">'+ friends +' </div>'
+    %>
+    <%- hold %>
+  <% } %>
+</div>
+
+<!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Collection</h5>
+
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <% if (data){
+          var games = '';
+          data.forEach(function(item){
+            games += '<div class="col"><div class="card"><img class = "card-image-top" src="https://drive.google.com/uc?id=1PBGvHJh9jOF7lSX-5ZtIiv0QJDKvS_IJ" alt="game image" width="200" height="300"><div class="card-body"><h5>'+ item.Title+'</h5><p></p><p class="card-subtitle mb-2 text-muted">'+item.DateReleased+'</p><p>'+item.Description+'</p></div></div></div>'
+          });
+          var hold = '<div class="row">'+ games +' </div>'
+          %>
+          <%- hold %>
+        <% } %>
+
+    </div>
+  </div>
+</div>
+</div> -->
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

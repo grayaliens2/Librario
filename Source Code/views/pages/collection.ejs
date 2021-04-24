@@ -1,0 +1,111 @@
+<%- include('../template/head') %>
+<%- include('../template/nav') %>
+
+
+<div class="container">
+<div class="card">
+  <div class="card-header" >
+    My Collection
+  </div>
+</div>
+<% if (data){
+  var games = '';
+  data.forEach(function(item){
+    games += '<div class="col"><div class="card"><img class = "card-image-top" src='+ item.Link +' alt="game image" width="200" height="300"><div class="card-body"><h5>'+ item.Title+'</h5><p></p><p class="card-subtitle mb-2 text-muted">'+item.DateReleased+'</p><p>'+item.Description+'</p></div></div></div>'
+  });
+  var hold = '<div class="row">'+ games +' </div>'
+  %>
+  <%- hold %>
+<% } %>
+</div>
+
+<script src="add-element.js"></script>
+
+<form action="/addgame" method="POST">
+  <div class="form-group">
+    <label for="gamename">Title</label>
+    <input type="text" class="form-control" id="gamename" name = "gamename" placeholder="Game Name"/>
+  </div>
+  <div class="form-group">
+    <label for="yearpublished">Year Published</label>
+    <input type="text" class="form-control" id="yearpublished" name = "yearpublished" placeholder="Year Published"/>
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" id="description" name = "description" rows="3" placeholder="Description"/>
+  </div>
+  <input type="submit" value="Click here to submit the form"/>
+  <form action="/" method="get">
+    </form>
+</form>
+
+<!-- Modal -->
+  <!-- <form action="/addgame" method="post">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Add A Game</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Name</label>
+    <input type="text" class="form-control" id="gamename" name = "gamename">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Year Published</label>
+    <select class="form-control" id="yearpublished" name = "yearpublished" >
+      <option>2021</option>
+      <option>2020</option>
+      <option>2019</option>
+      <option>2018</option>
+      <option>2017</option>
+      <option>2016</option>
+      <option>2015</option>
+      <option>2014</option>
+      <option>2013</option>
+      <option>2012</option>
+      <option>2011</option>
+      <option>2010</option>
+      <option>2009</option>
+      <option>2008</option>
+      <option>2007</option>
+      <option>2006</option>
+      <option>2005</option>
+      <option>2004</option>
+      <option>2003</option>
+      <option>2002</option>
+      <option>2001</option>
+      <option>2000</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Publisher</label>
+    <textarea class="form-control" id="publisher" rows="1"></textarea>
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Platform</label>
+    <textarea class="form-control" id="platform" rows="1"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Notes</label>
+    <textarea class="form-control" id="notes" rows="3"></textarea>
+  </div>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="/addgame">Add Game</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form> -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<!-- Navbar -->
