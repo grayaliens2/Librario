@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+html{
+  background-color: #FCF066;
+}
+
+body{
+  background-color: #FCF066;
+}
+
+.page-wrap{
+  background-color: #FCF066;
+}
+
+.container{
+  font-family: "Poppins";
+  font-weight: 400;
+  background-color: #FCF066;
+  margin-left:0;
+  margin-right:0;
+}
+
+.header h5{
+  padding: 20px;
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+.card{
+  background-color: #FCF066;
+}
+
+.add-button-wrapper{
+  width:100%;
+  margin: 0 auto;
+  text-align: center;
+  height: 150px;
+  position: absolute;
+  bottom: 0px; left: 0;
+}
+
+ .navbar{
+  background-color: blue;
+  font-family: "Space Mono";
+}
+
+.navbar a{
+ font-family: "Space Mono";
+ font-weight: 700:
+}
+
+.navbar button{
+  float: right;
+}
+
+.card-header{
+  border: 0px black;
+  background-color: red;
+}
+
+#add-button {
+  background-color:transparent;
+  width:150px;
+  border: 0px blue;
+  margin: left auto;
+  margin: right auto;
+  text-align: center;
+
+}
